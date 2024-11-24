@@ -1,7 +1,7 @@
 from django.shortcuts import render
 import requests
 from django.http import JsonResponse
-
+from decouple import config
 # Home view
 
 
@@ -26,8 +26,7 @@ def get_chatbot_response(request):
         # Hugging Face API URL (using BlenderBot)
         url = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
         headers = {
-            # Ensure you're using the right API token
-            "Authorization": "Bearer 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"
+            "Authorization": f"Bearer {config('HUGGINGFACE_API_KEY')}"
         }
 
         try:
