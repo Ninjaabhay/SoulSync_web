@@ -28,7 +28,7 @@ function appendMessage(sender, text) {
 
 // Update this function to send the message to the Hugging Face API
 function sendToChatbot(message) {
-  fetch("/get-chatbot-response/?message=" + encodeURIComponent(message))
+  fetch("/get-response/?message=" + encodeURIComponent(message))
     .then((response) => response.json())
     .then((data) => {
       console.log(data); // Log the response to the console

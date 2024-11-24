@@ -37,7 +37,7 @@
           chatWindow.appendChild(userMessageDiv);
 
           // Make AJAX request to get the chatbot response
-          fetch(`/get-chatbot-response/?message=${encodeURIComponent(message)}`)
+          fetch(`/get-response/?message=${encodeURIComponent(message)}`)
             .then((response) => response.json())
             .then((data) => {
               const chatbotMessageDiv = document.createElement("div");

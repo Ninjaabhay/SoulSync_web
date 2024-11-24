@@ -87,20 +87,20 @@ WSGI_APPLICATION = 'SoulSync_web.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 # Development only
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# production only
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Switch to PostgreSQL
-        'NAME': config('DATABASE_URL'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# production only
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',  # Switch to PostgreSQL
+#         'NAME': config('DATABASE_URL'),
+#     }
+# }
 
 
 # Password validation
