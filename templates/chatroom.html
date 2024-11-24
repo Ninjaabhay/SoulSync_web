@@ -41,7 +41,7 @@
             .then((response) => response.json())
             .then((data) => {
               const chatbotMessageDiv = document.createElement("div");
-              chatbotMessageDiv.textContent = "Chatbot: " + data.reply;
+              chatbotMessageDiv.textContent = data.reply;
               chatWindow.appendChild(chatbotMessageDiv);
               document.getElementById("message").value = ""; // Clear input field
             });

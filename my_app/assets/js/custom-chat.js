@@ -33,7 +33,10 @@ function sendToChatbot(message) {
     .then((data) => {
       console.log(data); // Log the response to the console
       const reply = data.reply || "Sorry, I couldn't understand that.";
-      appendMessage("bot", reply);
+      // Only append the message if the reply is not empty
+      if (reply) {
+        appendMessage("bot", reply);
+      }
     })
     .catch((error) => {
       appendMessage("bot", "Oops! Something went wrong.");

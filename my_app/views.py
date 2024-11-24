@@ -51,4 +51,4 @@ def get_chatbot_response(request):
         return JsonResponse({"reply": chatbot_reply})
 
     # In case there's no message
-    # return JsonResponse({"reply": "No message received."})
+    return JsonResponse({"reply": ""})
